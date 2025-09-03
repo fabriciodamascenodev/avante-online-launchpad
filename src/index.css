@@ -115,3 +115,177 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Interactive Circuit Styles */
+.circuit-container {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+.circuit-grid {
+  background-image: 
+    linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: gridPulse 4s ease-in-out infinite;
+}
+
+.circuit-element, .circuit-path, .circuit-node, .circuit-chip, .data-path, .connection-dot {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.3;
+  filter: brightness(0.5);
+}
+
+/* Mouse proximity lighting effect */
+.circuit-container:hover .circuit-element,
+.circuit-container:hover .circuit-path,
+.circuit-container:hover .circuit-node,
+.circuit-container:hover .circuit-chip {
+  animation: circuitActivation 0.8s ease-out forwards;
+}
+
+.circuit-branch {
+  transform-origin: center;
+}
+
+.branch-1 {
+  animation-delay: 0.1s;
+}
+
+.branch-2 {
+  animation-delay: 0.2s;
+}
+
+.branch-3 {
+  animation-delay: 0.3s;
+}
+
+.branch-4 {
+  animation-delay: 0.4s;
+}
+
+.circuit-hub .hub-core {
+  animation-delay: 0s;
+}
+
+.circuit-hub .hub-center {
+  animation-delay: 0.05s;
+}
+
+.data-path {
+  stroke-dasharray: 8, 4;
+  animation: dataFlow 3s linear infinite;
+}
+
+.connection-dot {
+  animation: connectionPulse 2s ease-in-out infinite;
+}
+
+/* Enhanced glow effect based on mouse position */
+.circuit-container:hover .circuit-path {
+  filter: 
+    drop-shadow(0 0 4px currentColor) 
+    drop-shadow(0 0 8px currentColor) 
+    brightness(1.5);
+  opacity: 0.9;
+}
+
+.circuit-container:hover .circuit-node {
+  filter: 
+    drop-shadow(0 0 6px currentColor) 
+    drop-shadow(0 0 12px currentColor) 
+    brightness(1.8);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.circuit-container:hover .circuit-chip {
+  filter: 
+    drop-shadow(0 0 3px currentColor) 
+    drop-shadow(0 0 6px currentColor) 
+    brightness(1.3);
+  opacity: 0.8;
+}
+
+.circuit-container:hover .hub-core {
+  filter: 
+    drop-shadow(0 0 8px hsl(190 100% 60%)) 
+    drop-shadow(0 0 16px hsl(190 100% 60%)) 
+    brightness(2);
+  opacity: 1;
+}
+
+.circuit-container:hover .hub-center {
+  filter: 
+    drop-shadow(0 0 10px hsl(190 100% 60%)) 
+    drop-shadow(0 0 20px hsl(190 100% 60%)) 
+    brightness(2.5);
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+/* Fade out effect when mouse leaves */
+.circuit-container:not(:hover) .circuit-element,
+.circuit-container:not(:hover) .circuit-path,
+.circuit-container:not(:hover) .circuit-node,
+.circuit-container:not(:hover) .circuit-chip {
+  animation: circuitDeactivation 1.2s ease-out forwards;
+}
+
+@keyframes circuitActivation {
+  0% {
+    opacity: 0.3;
+    filter: brightness(0.5);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    filter: brightness(1.2);
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.9;
+    filter: brightness(1.5);
+    transform: scale(1);
+  }
+}
+
+@keyframes circuitDeactivation {
+  0% {
+    opacity: 0.9;
+    filter: brightness(1.5);
+  }
+  100% {
+    opacity: 0.3;
+    filter: brightness(0.5);
+  }
+}
+
+@keyframes dataFlow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 24;
+  }
+}
+
+@keyframes connectionPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes gridPulse {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}

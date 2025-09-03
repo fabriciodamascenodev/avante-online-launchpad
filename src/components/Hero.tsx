@@ -4,44 +4,78 @@ import { ChevronRight, Code, Globe, Zap } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-dark">
-      {/* Tech background elements */}
-      <div className="absolute inset-0 opacity-10">
+      {/* Interactive Circuit Background */}
+      <div className="absolute inset-0 opacity-20">
         <svg className="w-full h-full" viewBox="0 0 1200 800">
           <defs>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="hsl(190 100% 60%)" strokeWidth="1"/>
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="hsl(190 100% 60%)" strokeWidth="0.5"/>
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
           
-          {/* Animated tech lines */}
-          <g className="animate-tech-lines">
+          {/* Interactive Circuit Paths */}
+          <g>
+            {/* Main Circuit Lines */}
             <path 
-              d="M100,100 L300,200 L500,150 L700,250 L900,200" 
+              id="circuit1"
+              d="M50,150 L200,150 L200,250 L350,250 L350,350 L500,350" 
               fill="none" 
               stroke="hsl(190 100% 60%)" 
-              strokeWidth="2"
-              strokeDasharray="10,5"
+              strokeWidth="3"
+              className="transition-all duration-300 hover:stroke-[hsl(190_100%_80%)] hover:drop-shadow-[0_0_8px_hsl(190_100%_60%)] cursor-pointer opacity-40 hover:opacity-100"
             />
             <path 
-              d="M200,300 L400,400 L600,350 L800,450 L1000,400" 
+              id="circuit2"
+              d="M700,100 L850,100 L850,200 L1000,200 L1000,300 L1150,300" 
+              fill="none" 
+              stroke="hsl(45 100% 75%)" 
+              strokeWidth="3"
+              className="transition-all duration-300 hover:stroke-[hsl(45_100%_85%)] hover:drop-shadow-[0_0_8px_hsl(45_100%_75%)] cursor-pointer opacity-40 hover:opacity-100"
+            />
+            <path 
+              id="circuit3"
+              d="M100,450 L250,450 L250,550 L400,550 L400,650 L550,650" 
               fill="none" 
               stroke="hsl(190 100% 60%)" 
-              strokeWidth="2"
-              strokeDasharray="15,10"
+              strokeWidth="3"
+              className="transition-all duration-300 hover:stroke-[hsl(190_100%_80%)] hover:drop-shadow-[0_0_8px_hsl(190_100%_60%)] cursor-pointer opacity-40 hover:opacity-100"
+            />
+            <path 
+              id="circuit4"
+              d="M800,500 L950,500 L950,600 L1100,600" 
+              fill="none" 
+              stroke="hsl(45 100% 75%)" 
+              strokeWidth="3"
+              className="transition-all duration-300 hover:stroke-[hsl(45_100%_85%)] hover:drop-shadow-[0_0_8px_hsl(45_100%_75%)] cursor-pointer opacity-40 hover:opacity-100"
             />
           </g>
           
-          {/* Floating circles */}
-          <circle cx="150" cy="200" r="4" fill="hsl(190 100% 60%)" className="animate-float">
-            <animate attributeName="cy" values="200;180;200" dur="4s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="800" cy="300" r="6" fill="hsl(45 100% 75%)" className="animate-float">
-            <animate attributeName="cy" values="300;280;300" dur="5s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="1000" cy="150" r="3" fill="hsl(190 100% 60%)" className="animate-float">
-            <animate attributeName="cy" values="150;130;150" dur="6s" repeatCount="indefinite"/>
-          </circle>
+          {/* Circuit Nodes */}
+          <g>
+            <circle cx="200" cy="150" r="6" fill="hsl(190 100% 60%)" 
+              className="transition-all duration-300 hover:fill-[hsl(190_100%_80%)] hover:drop-shadow-[0_0_12px_hsl(190_100%_60%)] cursor-pointer opacity-60 hover:opacity-100" />
+            <circle cx="350" cy="250" r="6" fill="hsl(190 100% 60%)" 
+              className="transition-all duration-300 hover:fill-[hsl(190_100%_80%)] hover:drop-shadow-[0_0_12px_hsl(190_100%_60%)] cursor-pointer opacity-60 hover:opacity-100" />
+            <circle cx="850" cy="100" r="6" fill="hsl(45 100% 75%)" 
+              className="transition-all duration-300 hover:fill-[hsl(45_100%_85%)] hover:drop-shadow-[0_0_12px_hsl(45_100%_75%)] cursor-pointer opacity-60 hover:opacity-100" />
+            <circle cx="1000" cy="200" r="6" fill="hsl(45 100% 75%)" 
+              className="transition-all duration-300 hover:fill-[hsl(45_100%_85%)] hover:drop-shadow-[0_0_12px_hsl(45_100%_75%)] cursor-pointer opacity-60 hover:opacity-100" />
+            <circle cx="250" cy="450" r="6" fill="hsl(190 100% 60%)" 
+              className="transition-all duration-300 hover:fill-[hsl(190_100%_80%)] hover:drop-shadow-[0_0_12px_hsl(190_100%_60%)] cursor-pointer opacity-60 hover:opacity-100" />
+            <circle cx="400" cy="550" r="6" fill="hsl(190 100% 60%)" 
+              className="transition-all duration-300 hover:fill-[hsl(190_100%_80%)] hover:drop-shadow-[0_0_12px_hsl(190_100%_60%)] cursor-pointer opacity-60 hover:opacity-100" />
+          </g>
+          
+          {/* Processor Units */}
+          <g>
+            <rect x="180" y="130" width="40" height="40" fill="none" stroke="hsl(190 100% 60%)" strokeWidth="2" 
+              className="transition-all duration-300 hover:stroke-[hsl(190_100%_80%)] hover:drop-shadow-[0_0_8px_hsl(190_100%_60%)] cursor-pointer opacity-50 hover:opacity-100" />
+            <rect x="830" y="80" width="40" height="40" fill="none" stroke="hsl(45 100% 75%)" strokeWidth="2" 
+              className="transition-all duration-300 hover:stroke-[hsl(45_100%_85%)] hover:drop-shadow-[0_0_8px_hsl(45_100%_75%)] cursor-pointer opacity-50 hover:opacity-100" />
+            <rect x="230" y="430" width="40" height="40" fill="none" stroke="hsl(190 100% 60%)" strokeWidth="2" 
+              className="transition-all duration-300 hover:stroke-[hsl(190_100%_80%)] hover:drop-shadow-[0_0_8px_hsl(190_100%_60%)] cursor-pointer opacity-50 hover:opacity-100" />
+          </g>
         </svg>
       </div>
 

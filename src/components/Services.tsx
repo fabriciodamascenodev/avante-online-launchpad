@@ -61,9 +61,6 @@ const Services = () => {
     <section className="py-20 px-6 bg-gradient-dark relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-primary/50 via-transparent to-transparent"></div>
-        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-        
         {/* Floating tech elements */}
         <div className="absolute top-1/4 left-1/6 w-2 h-2 bg-primary rounded-full animate-float opacity-60"></div>
         <div className="absolute top-3/4 right-1/6 w-3 h-3 bg-secondary rounded-full animate-float opacity-60" style={{ animationDelay: '2s' }}></div>

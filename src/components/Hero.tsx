@@ -20,7 +20,7 @@ const Hero = () => {
       return () => container.removeEventListener('mousemove', handleMouseMove);
     }
   }, []);
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-dark">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-dark pt-16">
       {/* Interactive Electronic Circuits */}
       <div ref={circuitRef} className="absolute inset-0 opacity-30 circuit-container" style={{
       '--mouse-x': '50%',

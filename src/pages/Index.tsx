@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Pillars from "@/components/Pillars";
 import Services from "@/components/Services";
@@ -9,12 +10,25 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Hero />
-      <Pillars />
-      <Services />
-      <FAQ />
-      <Projects />
-      <Contact />
+      <Navigation />
+      <div id="hero">
+        <Hero />
+      </div>
+      <div id="pillars">
+        <Pillars />
+      </div>
+      <div id="services">
+        <Services />
+      </div>
+      <div id="faq">
+        <FAQ />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
       <Footer />
     </div>
   );

@@ -1,25 +1,499 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avante Soluções Online - Desenvolvimento Web e Presença Digital</title>
-    <meta name="description" content="Impulsionamos seu negócio com soluções digitais inovadoras. Desenvolvimento web, apps mobile, e-commerce e presença online de impacto." />
-    <meta name="author" content="Avante Soluções Online" />
-    <meta name="keywords" content="desenvolvimento web, apps mobile, e-commerce, presença digital, soluções online, marketing digital" />
+    <meta name="description" content="Impulsionamos seu negócio com soluções digitais inovadoras. Desenvolvimento web, apps mobile, e-commerce e presença online de impacto.">
+    <meta name="author" content="Avante Soluções Online">
+    <meta name="keywords" content="desenvolvimento web, apps mobile, e-commerce, presença digital, soluções online, marketing digital">
+    
+    <meta property="og:title" content="Avante Soluções Online - Desenvolvimento Web e Presença Digital">
+    <meta property="og:description" content="Impulsionamos seu negócio com soluções digitais inovadoras. Desenvolvimento web, apps mobile, e-commerce e presença online de impacto.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lovable_dev">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="nav-fixed">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="src/assets/logo.png" alt="Avante Soluções Online" class="logo">
+                </div>
+                
+                <div class="nav-menu desktop-menu">
+                    <a href="#hero" class="nav-link">Início</a>
+                    <a href="#pillars" class="nav-link">Pilares</a>
+                    <a href="#services" class="nav-link">Serviços</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#projects" class="nav-link">Projetos</a>
+                    <a href="#contact" class="nav-link">Contato</a>
+                </div>
+                
+                <div class="mobile-menu">
+                    <button id="mobile-menu-btn" class="mobile-menu-btn">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu-content" class="mobile-menu-content">
+            <a href="#hero" class="mobile-nav-link">Início</a>
+            <a href="#pillars" class="mobile-nav-link">Pilares</a>
+            <a href="#services" class="mobile-nav-link">Serviços</a>
+            <a href="#faq" class="mobile-nav-link">FAQ</a>
+            <a href="#projects" class="mobile-nav-link">Projetos</a>
+            <a href="#contact" class="mobile-nav-link">Contato</a>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="Avante Soluções Online - Desenvolvimento Web e Presença Digital" />
-    <meta property="og:description" content="Impulsionamos seu negócio com soluções digitais inovadoras. Desenvolvimento web, apps mobile, e-commerce e presença online de impacto." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="circuit-background">
+            <svg class="circuit-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+                <g class="circuit-hub">
+                    <rect x="580" y="380" width="40" height="40" fill="none" stroke="hsl(190 100% 60%)" stroke-width="2" class="circuit-element hub-core" />
+                    <circle cx="600" cy="400" r="3" fill="hsl(190 100% 60%)" class="circuit-element hub-center" />
+                </g>
+                <g class="circuit-branch branch-1">
+                    <path d="M600,380 L600,300 L500,300 L500,200 L400,200" fill="none" stroke="hsl(190 100% 60%)" stroke-width="2" class="circuit-path" />
+                    <circle cx="500" cy="300" r="4" fill="hsl(190 100% 60%)" class="circuit-node" />
+                    <circle cx="500" cy="200" r="4" fill="hsl(190 100% 60%)" class="circuit-node" />
+                    <rect x="380" y="190" width="20" height="20" fill="none" stroke="hsl(190 100% 60%)" stroke-width="1.5" class="circuit-chip" />
+                </g>
+                <g class="circuit-branch branch-2">
+                    <path d="M620,400 L720,400 L720,300 L820,300 L820,250" fill="none" stroke="hsl(45 100% 75%)" stroke-width="2" class="circuit-path" />
+                    <circle cx="720" cy="400" r="4" fill="hsl(45 100% 75%)" class="circuit-node" />
+                    <circle cx="720" cy="300" r="4" fill="hsl(45 100% 75%)" class="circuit-node" />
+                    <rect x="810" y="240" width="20" height="20" fill="none" stroke="hsl(45 100% 75%)" stroke-width="1.5" class="circuit-chip" />
+                </g>
+            </svg>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-title">
+                <h1>
+                    <span class="gradient-secondary">AVANTE</span><br>
+                    <span class="gradient-secondary">SOLUÇÕES</span><br>
+                    <span class="gradient-primary">ONLINE</span>
+                </h1>
+            </div>
+            
+            <p class="hero-subtitle">
+                Impulsionamos seu negócio com soluções digitais inovadoras e presença online de impacto
+            </p>
+            
+            <div class="hero-features">
+                <div class="feature-tag">
+                    <span class="feature-icon">⚡</span>
+                    <span>Desenvolvimento Assistido por IA</span>
+                </div>
+                <div class="feature-tag">
+                    <span class="feature-icon">💻</span>
+                    <span>Soluções Personalizadas</span>
+                </div>
+                <div class="feature-tag">
+                    <span class="feature-icon">🌐</span>
+                    <span>Presença Digital</span>
+                </div>
+            </div>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary">
+                    Solicitar Orçamento
+                    <span class="btn-arrow">→</span>
+                </button>
+                <button class="btn btn-outline">Nossos Projetos</button>
+            </div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Pillars Section -->
+    <section id="pillars" class="pillars-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-primary">Nossos Pilares</h2>
+                <p class="section-subtitle">Os fundamentos que guiam nossa abordagem para o sucesso digital</p>
+            </div>
+            
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🚀</div>
+                    <h3>Inovação Tecnológica</h3>
+                    <h4>Soluções de Vanguarda</h4>
+                    <p>Utilizamos as mais avançadas tecnologias e metodologias ágeis para criar soluções digitais que se destacam no mercado.</p>
+                    <ul class="pillar-features">
+                        <li>Desenvolvimento com IA</li>
+                        <li>Tecnologias Emergentes</li>
+                        <li>Metodologias Ágeis</li>
+                    </ul>
+                    <button class="btn btn-sm">Saiba Mais</button>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon">👥</div>
+                    <h3>Experiência do Usuário</h3>
+                    <h4>Design Centrado no Usuário</h4>
+                    <p>Criamos interfaces intuitivas e experiências digitais memoráveis que geram resultados concretos para seu negócio.</p>
+                    <ul class="pillar-features">
+                        <li>Design Responsivo</li>
+                        <li>UX/UI Otimizada</li>
+                        <li>Acessibilidade</li>
+                    </ul>
+                    <button class="btn btn-sm">Saiba Mais</button>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon">📈</div>
+                    <h3>Resultados Mensuráveis</h3>
+                    <h4>ROI Comprovado</h4>
+                    <p>Focamos em métricas que importam, garantindo que cada projeto entregue valor mensurável para seu investimento.</p>
+                    <ul class="pillar-features">
+                        <li>Analytics Avançado</li>
+                        <li>Otimização SEO</li>
+                        <li>Conversão Otimizada</li>
+                    </ul>
+                    <button class="btn btn-sm">Saiba Mais</button>
+                </div>
+            </div>
+            
+            <div class="pillars-cta">
+                <button class="btn btn-primary btn-lg">Transforme Seu Negócio Digital</button>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Soluções completas para sua presença digital</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Sites Responsivos</h3>
+                    <p>Desenvolvimento de sites modernos, responsivos e otimizados para conversão.</p>
+                    <ul class="service-features">
+                        <li>Design Responsivo</li>
+                        <li>Otimização SEO</li>
+                        <li>Velocidade Otimizada</li>
+                        <li>Painel Administrativo</li>
+                    </ul>
+                    <button class="btn btn-outline">Ver Detalhes</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3>E-commerce</h3>
+                    <p>Lojas virtuais completas com gestão de produtos, pagamentos e logística.</p>
+                    <ul class="service-features">
+                        <li>Gestão de Produtos</li>
+                        <li>Múltiplos Pagamentos</li>
+                        <li>Controle de Estoque</li>
+                        <li>Integração Correios</li>
+                    </ul>
+                    <button class="btn btn-outline">Ver Detalhes</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Apps Mobile</h3>
+                    <p>Aplicativos nativos e híbridos para iOS e Android com performance superior.</p>
+                    <ul class="service-features">
+                        <li>Desenvolvimento Nativo</li>
+                        <li>Apps Híbridos</li>
+                        <li>Design Intuitivo</li>
+                        <li>Publicação nas Stores</li>
+                    </ul>
+                    <button class="btn btn-outline">Ver Detalhes</button>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <h3>Pronto para começar seu projeto?</h3>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">Solicitar Proposta</button>
+                    <button class="btn btn-secondary">Falar no WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-primary">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Esclarecemos as principais dúvidas sobre nossos serviços de desenvolvimento web</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quanto tempo leva para desenvolver um site?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O tempo de desenvolvimento varia conforme a complexidade do projeto. Sites simples podem ficar prontos em 7-15 dias, enquanto projetos mais complexos podem levar de 3-8 semanas. Sempre definimos prazos claros no início do projeto.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês oferecem suporte após a entrega?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Oferecemos 30 dias de suporte gratuito após a entrega para ajustes e dúvidas. Também temos planos de manutenção mensal para atualizações contínuas e suporte técnico.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>O site será responsivo (mobile-friendly)?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutamente! Todos os nossos sites são desenvolvidos com design responsivo, garantindo perfeita visualização em smartphones, tablets e desktops. É fundamental nos dias de hoje.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês trabalham com e-commerce?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, desenvolvemos lojas virtuais completas com sistemas de pagamento, gestão de produtos, controle de estoque e integração com correios para cálculo de frete.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Projetos</h2>
+                <p class="section-subtitle">Conheça alguns dos projetos que desenvolvemos para nossos clientes</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🌐</div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">E-commerce</span>
+                        <h3>Loja Online Boutique Elegance</h3>
+                        <p>Desenvolvimento completo de e-commerce para boutique de moda feminina com sistema de gestão integrado.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-buttons">
+                            <button class="btn btn-sm btn-outline">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">⚖️</div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Website Corporativo</span>
+                        <h3>Santos Advocacia</h3>
+                        <p>Site institucional para escritório de advocacia com área do cliente e sistema de agendamento.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-buttons">
+                            <button class="btn btn-sm btn-outline">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🏥</div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Sistema Web</span>
+                        <h3>Clínica Vida Saudável</h3>
+                        <p>Sistema completo de gestão para clínica médica com agendamento online e prontuário eletrônico.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-buttons">
+                            <button class="btn btn-sm btn-outline">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta">
+                <h3>Tem um projeto em mente?</h3>
+                <p>Vamos conversar sobre como podemos ajudar você a alcançar seus objetivos digitais.</p>
+                <button class="btn btn-primary btn-lg">Começar Meu Projeto</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Pronto para transformar sua presença digital? Vamos conversar!</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h4>Telefone</h4>
+                        <p>(11) 99999-9999</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h4>E-mail</h4>
+                        <p>contato@avanteonline.com.br</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">💬</div>
+                        <h4>WhatsApp</h4>
+                        <p>(11) 99999-9999</p>
+                        <button class="btn btn-sm btn-primary">Conversar Agora</button>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Solicite um Orçamento</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Empresa</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project-type">Tipo de Projeto</label>
+                            <select id="project-type" name="project-type" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="website">Website Institucional</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="app">Aplicativo Mobile</option>
+                                <option value="sistema">Sistema Web</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description">Descrição do Projeto</label>
+                            <textarea id="description" name="description" rows="4" placeholder="Conte-nos mais sobre seu projeto..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Solicitação</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Avante Soluções Online</h3>
+                    <p>Transformamos ideias em realidade digital. Especialistas em desenvolvimento web, e-commerce e aplicativos mobile.</p>
+                    <div class="footer-contact">
+                        <p>📧 contato@avanteonline.com.br</p>
+                        <p>📞 (11) 99999-9999</p>
+                        <p>📍 São Paulo, SP</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#services">Desenvolvimento Web</a></li>
+                        <li><a href="#services">E-commerce</a></li>
+                        <li><a href="#services">Apps Mobile</a></li>
+                        <li><a href="#services">Consultoria Digital</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#pillars">Sobre Nós</a></li>
+                        <li><a href="#projects">Portfólio</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Avante Soluções Online. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <button id="scroll-to-top" class="scroll-to-top">↑ Topo</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
